@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Spotify Clone</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://kit.fontawesome.com/26504e4a1f.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <nav>
+    <ul>
+      <li class="brand"><img src="images/logo.jpeg" alt="Spotify Logo" />Spotify</li>
+      <li>Home</li>
+      <li>About</li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <div class="songList">
+      <h1>Best of NCS</h1>
+      <div class="songItemContainer" id="songList">
+        <!-- Song items inserted by JS -->
+      </div>
+    </div>
+
+    <div class="songBanner">
+        
+    </div>
+  </div>
+
+  <div class="bottom">
+    <input type="range" id="progressBar" min="0" max="100" value="0" />
+    <div class="icons">
+      <i class="fas fa-step-backward fa-2x" id="previous"></i>
+      <i class="far fa-play-circle fa-3x" id="masterPlay"></i>
+      <i class="fas fa-step-forward fa-2x" id="next"></i>
+    </div>
+    <div class="songInfo">
+      <img src="images/playing.gif" width="42" id="gif" style="opacity: 0" />
+      <span id="masterSongName">Select a song</span>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

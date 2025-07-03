@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+
+/* Navbar */
+#nb {
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
+}
+.navbar .navbar-brand {
+  font-weight: 800;
+  color: #29f700 !important;
+  font-size: 25px;
+}
+#navbarNav a {
+  color: white;
+  border-bottom: 2px solid transparent;
+}
+#navbarNav a:hover {
+  border-bottom: 2px solid #29f700;
+}
+
+/* Home */
+#h {
+  background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.4)), url('b1.jpg');
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 20px;
+}
+#h h1 {
+  font-size: 60px;
+  letter-spacing: 3px;
+  text-shadow: 0px 1px 0px #ccc,
+               0px 2px 0px #ccc,
+               0px 3px 0px #ccc;
+}
+#h p {
+  font-size: 18px;
+}
+#h .input-group {
+  max-width: 500px;
+  margin-top: 20px;
+}
+
+/* Common Button Style */
+.s {
+  background-color: green !important;
+  color: white !important;
+  height: 38px;
+  box-shadow: 2px 4px 5px rgba(0,0,0,0.9);
+  border-radius: 10px;
+}
+
+/* About Section */
+#ab {
+  background: linear-gradient(to bottom right, pink, orange);
+  padding: 50px 20px;
+  text-align: center;
+}
+#ab h1 {
+  font-size: 50px;
+  font-weight: 800;
+}
+#ab p {
+  font-weight: 700;
+  font-size: 20px;
+}
+
+/* Products */
+#p {
+  background: #f5f5f5;
+  padding: 50px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+.card {
+  width: 100%;
+  max-width: 300px;
+  border: none;
+  border-radius: 20px;
+  box-shadow: 15px 20px 20px rgba(0,0,0,0.2), inset 4px 4px 10px white;
+  transition: all 0.3s ease-in-out;
+}
+.card:hover {
+  box-shadow: inset 10px 15px 15px rgba(0,0,0,0.3), inset -4px -4px 10px white;
+}
+/* Keep card img styles exactly as original */
+.card img {
+  height: 200px;
+  object-fit: cover;
+  border-radius: 20px 20px 0 0;
+  padding: 30px;
+}
+
+/* Contact Section */
+#c {
+  background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.4)), url('b4.jpg');
+  background-size: cover;
+  background-position: center;
+  padding: 50px 20px;
+  text-align: center;
+}
+#c h1 {
+  color: #ccc;
+}
+#c form input,
+#c form textarea {
+  background-color: transparent;
+  color: #fff;
+  border: 1px solid #fff;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+}
+form input::placeholder,
+form textarea::placeholder {
+  color: #ccc;
+}
+
+/* Footer */
+footer {
+  background: black;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+}
+
+/* ============================= */
+/*         MEDIA QUERIES        */
+/* ============================= */
+
+/* Tablets */
+@media (max-width: 991px) {
+  #h h1 {
+    font-size: 45px;
+  }
+
+  #ab h1 {
+    font-size: 40px;
+  }
+
+  .card {
+    max-width: 250px;
+  }
+}
+
+/* Mobile Phones */
+@media (max-width: 767px) {
+  #h h1 {
+    font-size: 35px;
+  }
+
+  #h p {
+    font-size: 16px;
+  }
+
+  .navbar .navbar-brand {
+    font-size: 20px;
+  }
+
+  #ab h1 {
+    font-size: 30px;
+  }
+
+  #ab p {
+    font-size: 18px;
+  }
+
+  #c h1 {
+    font-size: 28px;
+  }
+
+  .card {
+    max-width: 100%;
+  }
+
+  #p {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* Extra Small Devices */
+@media (max-width: 480px) {
+  #h h1 {
+    font-size: 28px;
+  }
+
+  #h .input-group {
+    flex-direction: column;
+  }
+
+  #h .input-group .form-control,
+  #h .input-group .btn {
+    width: 100%;
+    margin-top: 10px;
+  }
+}
